@@ -1,1 +1,1 @@
-Dev boards and breajouts
+Dev boards and breakouts
