@@ -5,5 +5,5 @@ preflight:
   run_erc: false
   run_drc: false
 
-imports:
+import:
   - ../configs/common.kibot.yaml
