@@ -12,8 +12,8 @@ jobs:
     strategy:
       matrix:
         board:
-          - xdevrf01
-          - xdevrf02
+          # - xdevrf01
+          # - xdevrf02
           - xdevrf03
 
     name: "KiCAD outputs for ${{ matrix.board }}"
