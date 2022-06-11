@@ -1,0 +1,57 @@
+name: "KiCAD CI/CD for dev-factory"
+
+on:
+  push:
+    branches:
+      - develop
+      - docs
+  workflow_dispatch:
+
+jobs:
+  generate-outputs:
+    strategy:
+      matrix:
+        board:
+          - xdevrf01
+          - xdevrf02
+          - xdevrf03
+
+    name: "KiCAD outputs for ${{ matrix.board }}"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: git submodule update --init --recursive
+      - uses: INTI-CMNB/KiBot@v1_k6
+        with:
+          config: ${{ matrix.board }}/${{ matrix.board }}.kibot.yaml
+          dir: ${{ matrix.board }}-outputs
+          schema: '${{ matrix.board }}/*.kicad_sch'
+          board: '${{ matrix.board }}/*.kicad_pcb'
+          verbose: 1
+      - uses: actions/upload-artifact@v2
+        with:
+          name: outputs
+          path: ${{ matrix.board }}-outputs
+
+  docs:
+    name: Docs
+    runs-on: ubuntu-latest
+    needs: [generate-outputs]
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup mdBook
+        uses: peaceiris/actions-mdbook@v1
+        with:
+          mdbook-version: 'latest'
+      - run: cargo install --git https://github.com/nnarain/mdbook-file-search
+      - uses: actions/download-artifact@v2
+        with:
+          name: outputs
+          path: outputs
+      - run: cd docs && mdbook build
+      - name: Deploy to Github Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          publish_dir: ./docs/book
