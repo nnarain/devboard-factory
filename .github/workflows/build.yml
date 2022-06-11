@@ -30,7 +30,7 @@ jobs:
           verbose: 1
       - uses: actions/upload-artifact@v2
         with:
-          name: outputs
+          name: ${{ matrix.board }}
           path: ${{ matrix.board }}-outputs
 
   docs:
@@ -45,10 +45,9 @@ jobs:
         with:
           mdbook-version: 'latest'
       - run: cargo install --git https://github.com/nnarain/mdbook-file-search
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
-          name: outputs
-          path: outputs
+          path: build
       - run: cd docs && mdbook build
       - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v3
