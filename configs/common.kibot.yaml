@@ -117,7 +117,7 @@ outputs:
     dir: renders
     options: &pcb_draw_ops
       format: png
-      no_drillholes: True
+      no_drillholes: False
       placeholder: True
       mirror: False
       vcuts: True
@@ -139,19 +139,19 @@ outputs:
     type: ibom
     dir: html
     options:
-      dark_mode: true
+      dark_mode: false
 
-  # - name: "render3d"
-  #   type: render_3d
-  #   run_by_default: false
-  #   options:
-  #     width: 2000
-  #     height: 1000
+  - name: "render3d"
+    type: render_3d
+    dir: renders
+    options:
+      rotate_x: 3
+      rotate_z: -2
 
-  # - name: step
-  #   comment: "Generate 3D model (STEP)"
-  #   type: step
-  #   dir: 3D
-  #   options:
-  #     metric_units: true
-  #     origin: 85,66.2
+  - name: step
+    comment: "Generate 3D model (STEP)"
+    type: step
+    dir: 3d
+    options:
+      metric_units: true
+      origin: 85,66.2

@@ -11,5 +11,6 @@ files = [
     {alias = "xdevrf03-schematic-svg", path = "../build/xdevrf03/renders/xdevrf03-schematic.svg", type = "image"},
     {alias = "xdevrf03-top",           path = "../build/xdevrf03/renders/xdevrf03-top.png",       type = "image"},
     {alias = "xdevrf03-bottom",        path = "../build/xdevrf03/renders/xdevrf03-bottom.png",    type = "image"},
-    {alias = "xdevrf03-ibom",          path = "../build/xdevrf03/html/xdevrf03-ibom.html",        type = "link"}
+    {alias = "xdevrf03-ibom",          path = "../build/xdevrf03/html/xdevrf03-ibom.html",        type = "link"},
+    {alias = "xdevrf03-3d",            path = "../build/xdevrf03/renders/xdevrf03-3D_top.png",    type = "image"},
 ]
