@@ -576,7 +576,7 @@
     (pad "B11" thru_hole circle locked (at -2.4 -3.01 270) (size 0.65 0.65) (drill 0.4) (layers *.Cu *.Mask) (tstamp bdfae0b3-f259-4477-b8bc-3ac2eb046d6b))
     (pad "B12" thru_hole circle locked (at -2.8 -3.71 270) (size 0.65 0.65) (drill 0.4) (layers *.Cu *.Mask)
       (net 2 "GND") (pinfunction "GND") (pintype "passive") (tstamp 3a2751b7-0aa5-4a55-bfa1-35c44ae326db))
-    (model "D:/Users/nnarain/Code/workspace/Projects/devboard-factory/libraries/kicad-inventory/kicad-inventory.3dshapes/105450-0101.step"
+    (model "${KIPRJMOD}/../libraries/kicad-inventory/kicad-inventory.3dshapes/105450-0101.step"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1.1))
       (rotate (xyz -90 0 0))

@@ -2,6 +2,8 @@
 
 This is an ESP32-C3-MINI based dev board. It uses the Adafruit feather form factor.
 
+{{#find xdevrf03-3d}}
+
 **Schematic**
 
 {{#find xdevrf03-schematic}}
