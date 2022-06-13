@@ -9,3 +9,4 @@ This repo contains KiCAD projects for various dev boards and break outs
 | xdevrf01 | STM32 + nRF24 module | No         |
 | xdevrf02 | nRF52 + PCB Antenna  | No         |
 | xdevrf03 | ESP32-C3-MINI        | Yes        |
+| brkcan01 | SN65HVD232           | No         |

@@ -1,6 +1,6 @@
 # BRKCAN01
 
-This is an ESP32-C3-MINI based dev board. It uses the Adafruit feather form factor.
+This is an SN65HVD232 CAN transceiver breakout
 
 {{#find brkcan01-3d}}
 
