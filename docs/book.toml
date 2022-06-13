@@ -7,10 +7,19 @@ title = "devboard-factory"
 
 [preprocessor.file-search]
 files = [
+    # ESP32-C3-MINI breakout
     {alias = "xdevrf03-schematic",     path = "../build/xdevrf03/design/xdevrf03-schematic.pdf",  type = "link"},
     {alias = "xdevrf03-schematic-svg", path = "../build/xdevrf03/renders/xdevrf03-schematic.svg", type = "image"},
     {alias = "xdevrf03-top",           path = "../build/xdevrf03/renders/xdevrf03-top.png",       type = "image"},
     {alias = "xdevrf03-bottom",        path = "../build/xdevrf03/renders/xdevrf03-bottom.png",    type = "image"},
     {alias = "xdevrf03-ibom",          path = "../build/xdevrf03/html/xdevrf03-ibom.html",        type = "link"},
     {alias = "xdevrf03-3d",            path = "../build/xdevrf03/renders/xdevrf03-3D_top.png",    type = "image"},
+
+    # CAN breakout
+    {alias = "brkcan01-schematic",     path = "../build/brkcan01/design/brkcan01-schematic.pdf",  type = "link"},
+    {alias = "brkcan01-schematic-svg", path = "../build/brkcan01/renders/brkcan01-schematic.svg", type = "image"},
+    {alias = "brkcan01-top",           path = "../build/brkcan01/renders/brkcan01-top.png",       type = "image"},
+    {alias = "brkcan01-bottom",        path = "../build/brkcan01/renders/brkcan01-bottom.png",    type = "image"},
+    {alias = "brkcan01-ibom",          path = "../build/brkcan01/html/brkcan01-ibom.html",        type = "link"},
+    {alias = "brkcan01-3d",            path = "../build/brkcan01/renders/brkcan01-3D_top.png",    type = "image"},
 ]

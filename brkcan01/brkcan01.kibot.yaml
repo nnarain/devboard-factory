@@ -8,4 +8,4 @@ preflight:
 import:
   - ../configs/common.kibot.yaml
   - ../configs/jlcpcb.kibot.yaml
-  - ../configs/jlcpcb-4L.kibot.yaml
+  - ../configs/jlcpcb-2L.kibot.yaml
