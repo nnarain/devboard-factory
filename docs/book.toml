@@ -14,6 +14,7 @@ files = [
     {alias = "xdevrf03-bottom",        path = "../build/xdevrf03/renders/xdevrf03-bottom.png",    type = "image"},
     {alias = "xdevrf03-ibom",          path = "../build/xdevrf03/html/xdevrf03-ibom.html",        type = "link"},
     {alias = "xdevrf03-3d",            path = "../build/xdevrf03/renders/xdevrf03-3D_top.png",    type = "image"},
+    {alias = "xdevrf03-jlcpcb",        path = "../build/xdevrf03/xdevrf03-jlcpcb_fab.zip",        type = "link"},
 
     # CAN breakout
     {alias = "brkcan01-schematic",     path = "../build/brkcan01/design/brkcan01-schematic.pdf",  type = "link"},
@@ -22,4 +23,5 @@ files = [
     {alias = "brkcan01-bottom",        path = "../build/brkcan01/renders/brkcan01-bottom.png",    type = "image"},
     {alias = "brkcan01-ibom",          path = "../build/brkcan01/html/brkcan01-ibom.html",        type = "link"},
     {alias = "brkcan01-3d",            path = "../build/brkcan01/renders/brkcan01-3D_top.png",    type = "image"},
+    {alias = "brkcan01-jlcpcb",        path = "../build/brkcan01/brkcan01-jlcpcb_fab.zip",        type = "link"},
 ]
