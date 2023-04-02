@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "rpi-silicon")(type "KiCad")(uri "${KIPRJMOD}/../libraries/kicad-inventory/rpi-silicon.kicad_sym")(options "")(descr ""))
+  (lib (name "adafruit")(type "Legacy")(uri "${KIPRJMOD}/../libraries/kicad-inventory/adafruit.lib")(options "")(descr ""))
+)
