@@ -14,6 +14,7 @@ jobs:
           # - xdevrf01
           # - xdevrf02
           - xdevrf03
+          - xdevstm01
           - brkcan01
 
     name: "KiCAD outputs for ${{ matrix.board }}"
