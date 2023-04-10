@@ -26,8 +26,8 @@ jobs:
         with:
           config: ${{ matrix.board }}/${{ matrix.board }}.kibot.yaml
           dir: ${{ matrix.board }}-outputs
-          schema: '${{ matrix.board }}/*.kicad_sch'
-          board: '${{ matrix.board }}/*.kicad_pcb'
+          schema: '${{ matrix.board }}/${{ matrix.board }}.kicad_sch'
+          board: '${{ matrix.board }}/${{ matrix.board }}.kicad_pcb'
           verbose: 1
       - uses: actions/upload-artifact@v2
         with:
