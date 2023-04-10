@@ -15,6 +15,17 @@ files = [
     {alias = "xdevrf03-ibom",          path = "../build/xdevrf03/html/xdevrf03-ibom.html",        type = "link"},
     {alias = "xdevrf03-3d",            path = "../build/xdevrf03/renders/xdevrf03-3D_top.png",    type = "image"},
     {alias = "xdevrf03-jlcpcb",        path = "../build/xdevrf03/xdevrf03-jlcpcb_fab.zip",        type = "link"},
+    {alias = "xdevrf03-3d_assets",     path = "../build/xdevrf03/xdevrf03-3d_assets.zip",         type = "link"},
+
+    # STM32F405 Devboard
+    {alias = "xdevstm01-schematic",     path = "../build/xdevstm01/design/xdevstm01-schematic.pdf",  type = "link"},
+    {alias = "xdevstm01-schematic-svg", path = "../build/xdevstm01/renders/xdevstm01-schematic.svg", type = "image"},
+    {alias = "xdevstm01-top",           path = "../build/xdevstm01/renders/xdevstm01-top.png",       type = "image"},
+    {alias = "xdevstm01-bottom",        path = "../build/xdevstm01/renders/xdevstm01-bottom.png",    type = "image"},
+    {alias = "xdevstm01-ibom",          path = "../build/xdevstm01/html/xdevstm01-ibom.html",        type = "link"},
+    {alias = "xdevstm01-3d",            path = "../build/xdevstm01/renders/xdevstm01-3D_top.png",    type = "image"},
+    {alias = "xdevstm01-jlcpcb",        path = "../build/xdevstm01/xdevstm01-jlcpcb_fab.zip",        type = "link"},
+    {alias = "xdevstm01-3d_assets",     path = "../build/xdevstm01/xdevstm01-3d_assets.zip",         type = "link"},
 
     # CAN breakout
     {alias = "brkcan01-schematic",     path = "../build/brkcan01/design/brkcan01-schematic.pdf",  type = "link"},
@@ -24,4 +35,11 @@ files = [
     {alias = "brkcan01-ibom",          path = "../build/brkcan01/html/brkcan01-ibom.html",        type = "link"},
     {alias = "brkcan01-3d",            path = "../build/brkcan01/renders/brkcan01-3D_top.png",    type = "image"},
     {alias = "brkcan01-jlcpcb",        path = "../build/brkcan01/brkcan01-jlcpcb_fab.zip",        type = "link"},
+    {alias = "brkcan01-3d_assets",     path = "../build/brkcan01/brkcan01-3d_assets.zip",         type = "link"},
 ]
+
+[preprocessor.d2]
+path = "d2"
+layout = "elk"
+inline = true
+output-dir = "d2"

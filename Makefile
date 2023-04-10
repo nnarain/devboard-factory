@@ -13,6 +13,7 @@ KIBOT_CMD_PREFIX=$(DOCKER) run --rm -it -v ${CURDIR}:/kicad $(KIBOT_IMAGE) kibot
 
 all:
 	$(DOCKER) run --rm -it -v $(CURDIR):$(PRJ_ROOT) $(KIBOT_IMAGE) kibot -c $(PRJ_ROOT)/xdevrf03/xdevrf03.kibot.yaml -e $(PRJ_ROOT)/xdevrf03/xdevrf03.kicad_sch -b $(PRJ_ROOT)/xdevrf03/xdevrf03.kicad_pcb -d $(OUT_DIR)/xdevrf03
+	$(DOCKER) run --rm -it -v $(CURDIR):$(PRJ_ROOT) $(KIBOT_IMAGE) kibot -c $(PRJ_ROOT)/xdevstm01/xdevstm01.kibot.yaml -e $(PRJ_ROOT)/xdevstm01/xdevstm01.kicad_sch -b $(PRJ_ROOT)/xdevstm01/xdevstm01.kicad_pcb -d $(OUT_DIR)/xdevstm01
 	$(DOCKER) run --rm -it -v $(CURDIR):$(PRJ_ROOT) $(KIBOT_IMAGE) kibot -c $(PRJ_ROOT)/brkcan01/brkcan01.kibot.yaml -e $(PRJ_ROOT)/brkcan01/brkcan01.kicad_sch -b $(PRJ_ROOT)/brkcan01/brkcan01.kicad_pcb -d $(OUT_DIR)/brkcan01
 
 clean:
