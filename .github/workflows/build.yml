@@ -3,7 +3,7 @@ name: "KiCAD CI/CD for dev-factory"
 on:
   push:
     branches:
-      - $default-branch
+      - develop
   workflow_dispatch:
 
 concurrency:
