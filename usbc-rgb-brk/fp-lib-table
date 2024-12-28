@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "USB-C-Connectors")(type "KiCad")(uri "D:/Users/nnarain/Code/workspace/Projects/devboard-factory/libraries/USB-C-Connectors/Kicad/Footprints/USB-C-Connectors.pretty")(options "")(descr ""))
+)

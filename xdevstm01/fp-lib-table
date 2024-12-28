@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name "USB-C-Connectors")(type "KiCad")(uri "${KIPRJMOD}/../libraries/USB-C-Connectors/Kicad/Footprints/USB-C-Connectors.pretty")(options "")(descr ""))
+  (lib (name "adafruit")(type "KiCad")(uri "${KIPRJMOD}/../libraries/kicad-inventory/adafruit.pretty")(options "")(descr ""))
+  (lib (name "tactile_switches")(type "KiCad")(uri "${KIPRJMOD}/../libraries/kicad-inventory/tactile_switches.pretty")(options "")(descr ""))
+  (lib (name "symbols")(type "KiCad")(uri "${KIPRJMOD}/../libraries/kicad-inventory/symbols.pretty")(options "")(descr ""))
+)

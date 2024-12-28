@@ -1,0 +1,127 @@
+kibot:
+  version: 1
+
+preflight:
+  run_erc: false
+  run_drc: false
+
+import:
+  - pcb2blender.yaml
+
+outputs:
+
+  # Design Docs
+
+  - name: 'print_sch'
+    comment: 'Print schematic (PDF)'
+    type: pdf_sch_print
+    dir: design
+
+  - name: "download_ds"
+    comment: "Download Datasheets"
+    type: download_datasheets
+    dir: design/datasheets
+
+  - name: 'design_docs'
+    comment: "Design Documentation"
+    type: compress
+    dir: .
+    options:
+      files:
+        - {from_output: print_sch, dest: /}
+        - {from_output: print_sch_svg, dest: /}
+        - {from_output: download_ds, dest: /datasheets}
+
+  # Renders
+  - name: 'print_sch_svg'
+    comment: "Print schematic (SVG)"
+    type: svg_sch_print
+    dir: renders
+
+  - name: pcbdraw_top
+    comment: "PcbDraw test top"
+    type: pcbdraw
+    dir: renders
+    options: &pcb_draw_ops
+      format: png
+      no_drillholes: False
+      placeholder: True
+      mirror: False
+      vcuts: True
+      warnings: all
+      show_components: all
+
+  - name: pcbdraw_bottom
+    comment: "PcbDraw test bottom"
+    type: pcbdraw
+    dir: renders
+    options:
+      <<: *pcb_draw_ops
+      bottom: True
+
+  - name: "render3d"
+    type: render_3d
+    dir: renders
+    options:
+      rotate_x: 3
+      rotate_z: -2
+
+  # 3D models
+
+  - name: step
+    comment: "Generate 3D model (STEP)"
+    type: step
+    dir: 3d
+    options:
+      metric_units: true
+      origin: 85,66.2
+
+#   - name: '3d_export'
+#     comment: "Exports the PCB in blender format"
+#     type: blender_export
+#     disable_run_by_default: _PCB2Blender_2_1
+#     options:
+#       pcb3d: _PCB2Blender_2_1
+# #       camera:
+# #         name: MyCamera
+# #         pos_x: 0.3
+# #         pos_y: width*2
+# #         pos_z: size*3
+#       render_options:
+#         transparent_background: true
+#         samples: 10
+#         #resolution_x: 1920
+#         #resolution_y: 1080
+#       point_of_view:
+#         rotate_x: 30
+#         rotate_z: -20
+#         # view: bottom
+#       outputs:
+#         - type: blender
+#         - type: render
+
+  # - name: 'navigate'
+  #   comment: "Browse the results"
+  #   type: navigate_results
+  #   run_by_default: false
+
+  - name: '3d_assets'
+    comment: "3D Assets"
+    type: compress
+    dir: .
+    options:
+      files:
+        - {from_output: _PCB2Blender_vrml_2_1, dest: /}
+        - {from_output: step, dest: /}
+
+  # Misc.
+
+  - name: 'ibom'
+    comment: 'Interactive BOM'
+    type: ibom
+    dir: html
+    options:
+      dark_mode: false
+
+  - name: 'Board View'
+    type: boardview
