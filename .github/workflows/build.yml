@@ -3,8 +3,12 @@ name: "KiCAD CI/CD for dev-factory"
 on:
   push:
     branches:
-      - develop
+      - $default-branch
   workflow_dispatch:
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   generate-outputs:
@@ -50,6 +54,9 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           path: build
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
       - run: pwd && cd docs && mdbook build
       - name: Upload static files as artifact
         uses: actions/upload-pages-artifact@v3
