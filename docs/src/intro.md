@@ -6,6 +6,7 @@ Assorted dev boards and breakouts
 | --------- | ------------------------- | -------------------------- | ----------------------------- |
 | xdevrf03  | ESP32-C3-MINI-1 Dev board | {{#find xdevrf03-jlcpcb}}  | {{#find xdevrf03-3d_assets}}  |
 | xdevstm01 | STM32F405 Dev board       | {{#find xdevstm01-jlcpcb}} | {{#find xdevstm01-3d_assets}} |
-| brkcan01  | SN65HVD232                | {{#find brkcan01-jlcpcb}}  | {{#find brkcan01-3d_assets}} |
+| xdevrpi01 | RP2040 Dev board          | {{#find xdevrpi01-jlcpcb}} | {{#find xdevrpi01-3d_assets}} |
+| brkcan01  | SN65HVD232                | {{#find brkcan01-jlcpcb}}  | {{#find brkcan01-3d_assets}}  |
 
 Note: Move all `.wrl` files into the component folder before importing the `pcb.wrl` into Blender.
