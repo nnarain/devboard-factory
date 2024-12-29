@@ -482,7 +482,7 @@
       "idf": "",
       "netlist": "",
       "plot": "",
-      "pos_files": "",
+      "pos_files": "../build/xdevrpi01/",
       "specctra_dsn": "",
       "step": "",
       "svg": "",

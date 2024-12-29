@@ -8437,7 +8437,7 @@
 			)
 		)
 		(path "/8ffc9457-ca92-4480-b45e-f5d65cb02283")
-		(attr through_hole)
+		(attr smd)
 		(fp_poly
 			(pts
 				(xy -1.5002 0.1) (xy -1.5002 1.5002) (xy -0.1 1.5002) (xy -0.1 0.1)
