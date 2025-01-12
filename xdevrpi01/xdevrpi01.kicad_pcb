@@ -909,10 +909,10 @@
 		(uuid "2c339c08-229f-4362-9f97-b8192e818212")
 		(at 143.25 105.05 -90)
 		(descr "LCSC-C720477 ")
-		(property "Reference" "RST"
+		(property "Reference" "SW2"
 			(at 0.05 2.3 90)
 			(unlocked yes)
-			(layer "F.SilkS")
+			(layer "F.Fab")
 			(uuid "c88f9cdf-cbd7-40f8-abc4-2a0db6cf7572")
 			(effects
 				(font
@@ -4411,10 +4411,10 @@
 		(uuid "6853d450-15e8-429f-927a-e7a28099ee95")
 		(at 147.85 105.05 90)
 		(descr "LCSC-C720477 ")
-		(property "Reference" "BOOT"
+		(property "Reference" "SW1"
 			(at -0.15 -2.23 90)
 			(unlocked yes)
-			(layer "F.SilkS")
+			(layer "F.Fab")
 			(uuid "f9d1b3e0-0d96-4077-b130-1d2bb0e88dec")
 			(effects
 				(font
@@ -14093,6 +14093,18 @@
 			(justify bottom)
 		)
 	)
+	(gr_text "BOOT"
+		(at 146.15 105.15 90)
+		(layer "F.SilkS")
+		(uuid "aae2cdac-dc39-47fc-8041-fdce40c3306f")
+		(effects
+			(font
+				(size 0.75 0.75)
+				(thickness 0.1)
+			)
+			(justify bottom)
+		)
+	)
 	(gr_text "GND"
 		(at 137.7 109.05 0)
 		(layer "F.SilkS")
@@ -14145,6 +14157,18 @@
 		(at 160.6 91.5 0)
 		(layer "F.SilkS")
 		(uuid "d16a32b3-d55f-4f0c-99c6-d65b4bb81697")
+		(effects
+			(font
+				(size 0.75 0.75)
+				(thickness 0.1)
+			)
+			(justify bottom)
+		)
+	)
+	(gr_text "RST"
+		(at 141.45 105.1 90)
+		(layer "F.SilkS")
+		(uuid "d1e47ba5-e529-4c9d-b7cf-b83ba225ac9c")
 		(effects
 			(font
 				(size 0.75 0.75)
